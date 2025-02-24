@@ -4,6 +4,7 @@ Website
 
 ## > [!IMPORTANT]
 - [ ] Build landing page
+- [ ] Enrollement form & page
 - [ ] Build navbar
 - [ ] Build sections
 - [ ] Testimonials
