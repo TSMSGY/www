@@ -1,7 +1,8 @@
 import { Blend } from "lucide-react";
 import { ThemeToggle } from "../theme-toggle";
-import { Button } from "../ui/button";
 import { NavbarItem } from "./navbar-item";
+import { Button } from "../ui/button";
+import { DropdownMenuItem } from "../ui/dropdown-menu";
 
 export const Navbar: React.FC = () => {
   return (
@@ -19,15 +20,24 @@ export const Navbar: React.FC = () => {
       </div>
 
       <div className="flex flex-row gap-3 text-muted-foreground">
-        <NavbarItem name="Products" />
+        <NavbarItem name="Products">
+          <DropdownMenuItem>
+            <p>Simulators</p>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+          Modules
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <p>Accessories</p>
+          </DropdownMenuItem>
+        </NavbarItem>
         <NavbarItem name="Academy" />
         <NavbarItem name="Testimonials" />
-        <NavbarItem name="Demo" />
-        <NavbarItem name="Contact" />
+        <NavbarItem name="Contact us" />
       </div>
 
       <div className="flex flex-row gap-3 items-center">
-        <Button>Get Started</Button>
+        <Button>Get a Quote</Button>
         <ThemeToggle />
       </div>
     </nav>

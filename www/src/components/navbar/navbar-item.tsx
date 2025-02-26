@@ -1,24 +1,30 @@
-import { ChevronDown } from "lucide-react";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "../ui/dropdown-menu";
 
 interface NavbarItemProps {
   name: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const NavbarItem: React.FC<NavbarItemProps> = ({ name, children }) => {
+  if (children === undefined) {
+    return (
+      <div className="group flex flex-row items-center gap-2 transition-all p-2 rounded-md cursor-pointer">
+        <p className="transition-all group-hover:text-primary-foreground">{name}</p>
+      </div>
+    );
+  }
+
   return (
-    <Popover>
-      <PopoverTrigger asChild>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
         <div className="group flex flex-row items-center gap-2 transition-all p-2 rounded-md cursor-pointer">
           <p className="transition-all group-hover:text-primary-foreground">{name}</p>
-          <ChevronDown size={20} className="group-hover:rotate-180 transition-all" />
         </div>
-      </PopoverTrigger>
-      <PopoverContent>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="font-zig text-muted-foreground p-2">
         {children}
-      </PopoverContent>
-    </Popover>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 
