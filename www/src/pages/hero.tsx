@@ -18,14 +18,14 @@ export const Hero: React.FC = () => {
   return (
     <div className="h-screen">
       <section className="flex flex-col gap-8 justify-center h-full items-center">
-        <h1 className="text-4xl sm:text-7xl/snug break-words text-center">
-          <span className="italic">Cutting edge</span>
+        <h1 className="text-3xl sm:text-6xl/snug break-words text-center rounded-full">
+          <span>Cutting edge</span>
           <br />
-          <span className="underline decoration-primary decoration-4 font-light">Surgical Simulation</span>
+          <span className="underline decoration-primary decoration-wavy decoration-4 font-light">Surgical Simulation</span>
           <br />
-          <span className="font-serif">Solutions</span>
+          <span>Solutions</span>
         </h1>
-        <Button size="lg" onClick={scrollToNextSection}>Get Started</Button>
+        <Button size="lg" className="font-semibold" onClick={scrollToNextSection}>Get Started</Button>
       </section>
       <section ref={nextSectionRef} className="flex flex-col gap-8 justify-center h-full items-center">
         <h1 className="text-4xl sm:text-7xl/snug break-words text-center">

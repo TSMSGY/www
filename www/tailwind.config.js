@@ -4,6 +4,9 @@ export default {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+     fontFamily: {
+            'zig': ['zig', 'sans-serif'], // 'zig' is the name you'll use in Tailwind classes
+          },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
