@@ -8,13 +8,13 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="
       flex flex-row gap-2 p-3 border-b border-dashed 
-      sticky top-0 backdrop-blur-md justify-between items-center
+      sticky top-0 backdrop-blur-md justify-between items-center z-50
       ">
 
       <div className="group flex flex-row gap-2 items-center">
         <Blend className="group-hover:animate-spin" />
         <p className="text-xl font-semibold">
-          <span>TrueSim </span>
+          <span>Temp </span>
           <span className="text-primary">Surgery</span>
         </p>
       </div>
@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
             <p>Simulators</p>
           </DropdownMenuItem>
           <DropdownMenuItem>
-          Modules
+            Modules
           </DropdownMenuItem>
           <DropdownMenuItem>
             <p>Accessories</p>

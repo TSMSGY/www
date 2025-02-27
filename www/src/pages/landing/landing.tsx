@@ -20,7 +20,7 @@ export const Landing: React.FC = () => {
 
       <section ref={nextSectionRef} className="flex flex-col gap-8 justify-center items-center">
         <h2 className="text-2xl sm:text-4xl/snug text-center">
-          <span className="underline decoration-primary decoration-wavy decoration-4 font-light">Transforming</span>
+          <span className="underline decoration-primary decoration-wavy decoration-3 font-light">Transforming</span>
           <br />
           <span>Surgical Training</span>
         </h2>
