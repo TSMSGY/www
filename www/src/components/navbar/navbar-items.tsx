@@ -10,7 +10,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { Blend } from "lucide-react";
+import { Blend, Menu } from "lucide-react";
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "../ui/drawer";
+import { Button } from "../ui/button";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -35,12 +37,30 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ]
 
-export function NavigationItems() {
+export const NavigationDrawer: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <NavigationMenu>
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button className={className} size="icon" variant="outline">
+          <Menu />
+        </Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>Navigation</DrawerTitle>
+        </DrawerHeader>
+        ...
+      </DrawerContent>
+    </Drawer>
+  )
+}
+
+export const NavigationItems: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <NavigationMenu className={className}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">Products</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <div className="row-span-3">
@@ -51,8 +71,8 @@ export function NavigationItems() {
                   >
                     <Blend className="h-6 w-6" />
                     <p className="mb-2 mt-4 text-lg font-medium">
-                      <span 
-        className="bg-gradient-to-r from-primary-foreground to-primary bg-clip-text text-transparent"
+                      <span
+                        className="bg-gradient-to-r from-primary-foreground to-primary bg-clip-text text-transparent"
                       >Next-Gen</span> Surgical Simulators
                     </p>
                     <p className="text-sm leading-tight text-muted-foreground">
@@ -93,17 +113,17 @@ export function NavigationItems() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-           Academy 
+            Academy
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-           Testimonial 
+            Testimonial
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-           Contact 
+            Contact
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -135,4 +155,3 @@ const ListItem = React.forwardRef<
     </li>
   )
 })
-ListItem.displayName = "ListItem"

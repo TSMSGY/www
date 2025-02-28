@@ -1,16 +1,17 @@
 import { Blend } from "lucide-react";
 import { ThemeToggle } from "../theme-toggle";
 import { Button } from "../ui/button";
-import { NavigationItems } from "./navbar-items";
+import { NavigationDrawer, NavigationItems } from "./navbar-items";
 
 export const Navbar: React.FC = () => {
   return (
-    <nav className="
+    <nav
+      className="
       flex flex-row gap-2 p-3 border-b border-dashed 
       sticky top-0 backdrop-blur-md justify-between
       items-center z-50
-      ">
-
+      "
+    >
       <div className="group flex flex-row gap-2 items-center">
         <Blend className="group-hover:animate-spin" />
         <p className="text-xl font-semibold">
@@ -19,28 +20,14 @@ export const Navbar: React.FC = () => {
         </p>
       </div>
 
-      <NavigationItems />
-      <div className="flex flex-row gap-3 items-center">
+      <NavigationItems className="hidden lg:flex" />
+
+      <div className="lg:flex lg:flex-row gap-3 items-center hidden">
         <Button>Get a Quote</Button>
         <ThemeToggle />
       </div>
+
+      <NavigationDrawer className="lg:hidden" />
     </nav>
   );
-}
-
-//<div className="flex flex-row gap-3 text-muted-foreground invisible md:visible">
-//  <NavbarItem name="Products">
-//    <DropdownMenuItem>
-//      <p>Simulators</p>
-//    </DropdownMenuItem>
-//    <DropdownMenuItem>
-//      Modules
-//    </DropdownMenuItem>
-//    <DropdownMenuItem>
-//      <p>Accessories</p>
-//    </DropdownMenuItem>
-//  </NavbarItem>
-//  <NavbarItem name="Academy" />
-//  <NavbarItem name="Testimonials" />
-//  <NavbarItem name="Contact us" />
-//</div>
+};

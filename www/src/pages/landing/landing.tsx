@@ -15,10 +15,11 @@ export const Landing: React.FC = () => {
 
   return (
     <div className="h-screen">
-      <Hero/>
-      <Testimonials/>
+      <Hero />
+      <Testimonials />
 
-      <section ref={nextSectionRef} className="flex flex-col gap-8 justify-center items-center">
+      <section ref={nextSectionRef} className="flex flex-col gap-8 justify-center items-center p-5">
+
         <h2 className="text-2xl sm:text-4xl/snug text-center">
           <span className="underline decoration-primary decoration-wavy decoration-3 font-light">Transforming</span>
           <br />
@@ -27,12 +28,7 @@ export const Landing: React.FC = () => {
         <p className="text-muted-foreground text-center">
           Bridge the gap between theory and practice
         </p>
-        <Button className="p-6">
-          <AtSign/>
-          <span>Contact Us</span>
-        </Button>
       </section>
-
     </div>
   );
 } 
