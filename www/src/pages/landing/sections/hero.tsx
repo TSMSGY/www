@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
 return (
       <section className="flex flex-col gap-10 justify-center h-full items-center">
         <p className="
-          text-muted-foreground text-center 
+          text-center 
           rounded-full py-2 px-3 border-2 border-primary backdrop-blur-md">
           The future of surgical excellence is here
         </p>
