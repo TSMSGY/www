@@ -1,4 +1,4 @@
-interface Testimonial {
+export type TestimonialType = {
   author: string;
   quote: string;
   title: string;
@@ -7,10 +7,11 @@ interface Testimonial {
 
 // Function to generate a randomuser.me avatar URL based on a seed
 const generateAvatarUrl = (seed: number): string => {
-  return `https://randomuser.me/api/portraits/women/${seed}.jpg`; // Or 'men' if appropriate
+  return "https://i.pinimg.com/474x/17/6a/ff/176aff1a94d61fb392dce4ee64717918.jpg";
+  //return `https://randomuser.me/api/portraits/women/${seed}.jpg`; // Or 'men' if appropriate
 };
 
-export const testimonials: Testimonial[] = [
+export const testimonials: TestimonialType[] = [
   {
     quote:
       "As a surgical resident, I found the simulator incredibly helpful in preparing for complex procedures. The realistic haptics and detailed anatomy made a huge difference in my confidence and performance in the OR.",

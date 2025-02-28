@@ -1,15 +1,17 @@
 # www
 Website
 
-carousel for Testimonials
+implement drawer for mobile
+
 
 ## > [!IMPORTANT]
 - [ ] Build landing page
 - [ ] Enrollement form & page
-- [ ] Build navbar
+- [ ] Build mobile drawer
 - [ ] Build sections
-- [ ] Testimonials
 - [ ] Footer
+- [x] Build navbar
+- [x] Testimonials
 
 ## Future
 - Store page with products
