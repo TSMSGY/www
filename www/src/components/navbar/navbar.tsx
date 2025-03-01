@@ -1,7 +1,8 @@
 import { Blend } from "lucide-react";
 import { ThemeToggle } from "../theme-toggle";
 import { Button } from "../ui/button";
-import { NavigationDrawer, NavigationItems } from "./navbar-items";
+import { NavigationItems } from "./navbar-items";
+import { NavbarMenu } from "./navbar-menu";
 
 export const Navbar: React.FC = () => {
   return (
@@ -22,12 +23,15 @@ export const Navbar: React.FC = () => {
 
       <NavigationItems className="hidden lg:flex" />
 
-      <div className="lg:flex lg:flex-row gap-3 items-center hidden">
+      <div className="hidden lg:flex lg:flex-row gap-3 items-center">
         <Button>Get a Quote</Button>
         <ThemeToggle />
       </div>
 
-      <NavigationDrawer className="lg:hidden" />
+      <div className="lg:hidden flex flex-row gap-3 items-center">
+        <ThemeToggle />
+        <NavbarMenu />
+      </div>
     </nav>
   );
 };

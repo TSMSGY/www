@@ -1,9 +1,3 @@
-
-//<p className="text-xl">
-//  Bridge the gap between theory and practice. Experience cutting-edge technology that transforms surgical training, blending unparalleled realism with precise performance data. Our simulators empower the next generation of surgeons to sharpen their skills, deepen their understanding, and elevate patient outcomes.
-//</p>
-//
-
 import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
@@ -12,6 +6,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="flex flex-col gap-10 justify-center h-full items-center">
       <p className="
+        animate-pulse
         text-sm
         md:text-base
         text-center rounded-full py-2 px-3 
@@ -19,7 +14,7 @@ export const Hero: React.FC = () => {
         The future of surgical excellence is here
       </p>
       <h1 className="text-4xl/snug md:text-5xl/snug lg:text-6xl/snug break-words text-center rounded-full">
-        <span className="underline decoration-primary decoration-wavy decoration-3 font-light">Cutting edge </span>
+        <span className="underline decoration-primary decoration-wavy decoration-2 font-light">Cutting edge </span>
         <br />
         <TypeAnimation
           sequence={["Surgical Training", 2000, "Surgical Simulation", 5000]}
@@ -28,7 +23,7 @@ export const Hero: React.FC = () => {
           repeat={Infinity}
         />
       </h1>
-      <Button className="p-6">
+      <Button className="p-6 shadow-primary/50 shadow-lg">
         <Zap />
         <span>Get Started</span>
       </Button>

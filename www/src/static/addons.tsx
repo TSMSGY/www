@@ -8,7 +8,7 @@ export type AddonsType = {
 export const addons: AddonsType[] = [
   {
     title: "Modules",
-    description: "All the modules you may need for your simulators.",
+    description: "All the modules you need to sharpen your surgical skills.",
   },
   {
     title: "Consumables",
@@ -16,7 +16,7 @@ export const addons: AddonsType[] = [
   },
   {
     title: "Interventions",
-    description: "All the interventions you may need for your simulators.",
+    description: "Perform complex interventions in a safe, controlled & monitored environement.",
   },
   {
     title: "Accessories & Tooling",

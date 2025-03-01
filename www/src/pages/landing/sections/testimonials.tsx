@@ -7,7 +7,7 @@ export const Testimonials = () => {
   return (
     <section className="flex flex-col gap-8 p-8 justify-center items-center">
       <h2 className="text-2xl sm:text-4xl/snug text-center">
-        <span className="underline decoration-primary decoration-wavy decoration-3 font-bold">
+        <span className="underline decoration-primary decoration-wavy decoration-2 font-bold">
           Trusted
         </span>
         <br />

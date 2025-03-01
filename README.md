@@ -10,6 +10,7 @@ implement drawer for mobile
 - [ ] Build mobile drawer
 - [ ] Build sections
 - [ ] Footer
+- [x] Drawer
 - [x] Build navbar
 - [x] Testimonials
 

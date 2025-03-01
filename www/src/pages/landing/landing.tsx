@@ -1,17 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { AtSign, Zap } from "lucide-react";
-import { useCallback, useRef } from "react";
+import { useRef } from "react";
 import { Hero } from "./sections/hero";
 import { Testimonials } from "./sections/testimonials";
 
 
 export const Landing: React.FC = () => {
   const nextSectionRef = useRef<HTMLElement>(null);
-
-  const scrollToNextSection = useCallback(() => {
-    if (!nextSectionRef) return;
-    nextSectionRef.current?.scrollIntoView({ behavior: "smooth" })
-  }, [])
 
   return (
     <div className="h-screen">
@@ -21,12 +14,14 @@ export const Landing: React.FC = () => {
       <section ref={nextSectionRef} className="flex flex-col gap-8 justify-center items-center p-5">
 
         <h2 className="text-2xl sm:text-4xl/snug text-center">
-          <span className="underline decoration-primary decoration-wavy decoration-3 font-light">Transforming</span>
+          <span className="font-bold underline decoration-primary decoration-wavy decoration-2">
+            Imagined
+          </span>
           <br />
-          <span>Surgical Training</span>
+          <span>by world-leading experts.</span>
         </h2>
         <p className="text-muted-foreground text-center">
-          Bridge the gap between theory and practice
+          Carefully crafted & engineered under the supervision of award-winning Scholars.
         </p>
       </section>
     </div>
