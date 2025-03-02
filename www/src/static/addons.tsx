@@ -15,8 +15,8 @@ export const addons: AddonsType[] = [
     description: "All the consumables you may need for your simulators.",
   },
   {
-    title: "Interventions",
-    description: "Perform complex interventions in a safe, controlled & monitored environement.",
+    title: "Procedures",
+    description: "Perform complex procedures in a safe, controlled & monitored environement.",
   },
   {
     title: "Accessories & Tooling",

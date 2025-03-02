@@ -7,10 +7,9 @@ implement drawer for mobile
 ## > [!IMPORTANT]
 - [ ] Build landing page
 - [ ] Enrollement form & page
-- [ ] Build mobile drawer
 - [ ] Build sections
 - [ ] Footer
-- [x] Drawer
+- [x] Build mobile drawer
 - [x] Build navbar
 - [x] Testimonials
 
