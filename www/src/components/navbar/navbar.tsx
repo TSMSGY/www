@@ -1,4 +1,4 @@
-import { Blend } from "lucide-react";
+import { Logo } from "../logo";
 import { ThemeToggle } from "../theme-toggle";
 import { Button } from "../ui/button";
 import { NavigationItems } from "./navbar-items";
@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
       "
     >
       <div className="group flex flex-row gap-2 items-center">
-        <Blend className="group-hover:animate-spin" />
+        <Logo />
         <p className="text-xl font-semibold">
           <span>TrueSim </span>
           <span className="text-primary">Surgery</span>

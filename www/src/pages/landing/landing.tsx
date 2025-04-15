@@ -15,10 +15,10 @@ export const Landing: React.FC = () => {
 
         <h2 className="text-2xl sm:text-4xl/snug text-center">
           <span className="font-bold underline decoration-primary decoration-wavy decoration-2">
-            Imagined
+            Developed 
           </span>
           <br />
-          <span>by world-leading experts.</span>
+          <span>by world-renowned experts.</span>
         </h2>
         <p className="text-muted-foreground text-center">
           Carefully crafted & engineered under the supervision of award-winning Scholars.
